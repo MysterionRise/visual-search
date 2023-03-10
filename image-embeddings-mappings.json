@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "index.refresh_interval": "5s",
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "properties": {
+      "image_embedding": {
+        "type": "knn_vector",
+        "dimension": 768,
+        "method": {
+          "name": "hnsw",
+          "space_type": "cosinesimil"
+        }
+      },
+      "image_id": {
+        "type": "keyword"
+      },
+      "image_name": {
+        "type": "keyword"
+      },
+      "relative_path": {
+        "type": "keyword"
+      },
+      "exif": {
+        "properties": {
+          "location": {
+            "type": "geo_point"
+          },
+          "date": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+sentence-transformers
+opensearch-py
+Pillow
+tqdm
+exif
+jupyterlab
